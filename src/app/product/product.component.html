@@ -1,0 +1,21 @@
+<p>product works!</p>
+<h1>{{title}}</h1>
+<input type="number" name="price" [(ngModel)]="priceMax" >
+<div class="row">
+<div class="col-md-4" *ngFor="let product of listProduct,let i=index">
+  <div *ngIf="product.price<priceMax || priceMax==null">
+  <div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{product.title}}</h5>
+    <p class="card-text">Price :{{product.price}}</p>
+    <p class="card-text">Quantity :{{product.quantity}}</p>
+    <p class="card-text">Like: {{product.like}}</p>
+    <button href="#" class="btn btn-primary" (click)="buy(i)" [disabled]="product.quantity==0">buy</button>
+    <button href="#" class="btn btn-primary" (click)="like(i)" >like</button>
+  </div>
+</div>
+  </div>
+</div>
+</div>
+

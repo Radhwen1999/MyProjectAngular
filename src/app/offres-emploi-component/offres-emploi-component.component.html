@@ -1,7 +1,7 @@
 <input type="text" [(ngModel)]="rechercheParEntreprise" name="rechercheParEntreprise" placeholder="Rechercher par entreprise">
 <div class="row">
   <div class="col-md-4" *ngFor="let emploi of listeEmploi,let i=index">
-    <div *ngIf="rechercheParEntreprise==emploi.entreprise">
+    <div *ngIf="rechercheParEntreprise==emploi.entreprise || rechercheParEntreprise==null">
       <div class="card" style="width: 18rem;">
         <img src="..." class="card-img-top" alt="...">
         <div class="card-body">

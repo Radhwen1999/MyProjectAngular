@@ -6,6 +6,7 @@ import {OffresEmploiComponentComponent} from "./offres-emploi-component/offres-e
 import {ProductComponent} from "./product/product.component";
 import {NotFoundComponent} from "./not-found/not-found.component";
 import {ProductDetailsComponent} from "./product-details/product-details.component";
+import {AddProductComponent} from "./add-product/add-product.component";
 
 const routes: Routes = [
 
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path: 'products/:id',
     component: ProductDetailsComponent,},
   {path:'offres',component:OffresEmploiComponentComponent},
+  {path:'addProduct',component:AddProductComponent},
   {path:'**',component:NotFoundComponent},
 
 ];

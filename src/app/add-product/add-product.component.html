@@ -1,0 +1,30 @@
+<form #f="ngForm">
+  <div class="mb-3">
+    <label  class="form-label">id</label>
+    <input type="number" class="form-control" [(ngModel)]="Product.id" name="id" required #id="ngModel" >
+    <div *ngIf="id.invalid">
+      <div class="alert alert-danger"> id is required</div>
+    </div>
+  </div>
+  <div class="mb-3">
+    <label  class="form-label">quantity</label>
+    <input type="number" class="form-control"[(ngModel)]="Product.quantity" min="99" max="999" required #quantity="ngModel" name="quantity" >
+    <div *ngIf="quantity.invalid">
+      <div class="alert alert-danger"> quantity is invalid or missing</div>
+    </div>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">price</label>
+    <input type="number" class="form-control" [(ngModel)]="Product.price" required name="price">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">title</label>
+    <input type="string" class="form-control" [(ngModel)]="Product.title" required  name="exampleInputEmail1">
+  </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" (submit)="addProduct(Product)" [disabled]="f.invalid" class="btn btn-primary">Submit</button>
+</form>
+

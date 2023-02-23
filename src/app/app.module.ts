@@ -10,6 +10,8 @@ import { ArticleComponentComponent } from './article-component/article-component
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { AddProductComponent } from './add-product/add-product.component';
+import { TemplateDrivenFormComponentComponent } from './template-driven-form-component/template-driven-form-component.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     ArticleComponentComponent,
     NavBarComponent,
     NotFoundComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    AddProductComponent,
+    TemplateDrivenFormComponentComponent
   ],
   imports: [
     BrowserModule,
